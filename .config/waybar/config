@@ -1,0 +1,125 @@
+{
+  /*-------------properties-----------------*/
+    "layer": "top",
+    "position": "top",
+    "margin": 0,
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 30,
+
+  /*-------------bar-position---------------*/
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/media",
+    ],
+    "modules-center": [
+        "clock",
+    ],
+    "modules-right": [
+        "tray",
+        "backlight#value",
+        "wireplumber",
+        "network",
+        "battery",
+    ],
+
+  /*---------------Modules ---------------*/
+
+    "wireplumber": {
+        "format": "{icon} ",
+        "format-muted": " ",
+        "on-click": "kitty pulsemixer",
+        "max-volume": 100,
+        "scroll-step": 1,
+        "format-icons": ["󰕿", "󰖀", "󰖀", "󰕾", "󱄡"]
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon} ",
+        "format-icons":{
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} ",
+        "format-charging": "󰂄",
+        "format-plugged": "{capmonospaceacity} ",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["󰁺", "󰁻", "󰁻", "󰁽", "󰁿", "󰂀", "󰂀", "󰂂", "󰁹"]
+    },
+
+    "clock": {
+        "interval": 10,
+        // "format-alt": " {:%e %b %Y}", // Icon: calendar-alt
+        "format": "{:%e %b %H:%M} ",
+        "tooltip-format": "{:%e %B %Y}"
+    },
+
+    "network": {
+        "interval": 5,
+        "format-ethernet": " ", // Icon: ethernet
+        "format-wifi": "{icon} ",
+        "format-disconnected": "󰤭 ",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "kitty --class floating -e 'nmtui'",
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+    "network#vpn": {
+        "interface": "tun0",
+        "format": " ",
+        "format-disconnected": "⚠  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+    },
+
+    "hyprland/mode": {
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 120
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "disable-markup" : true,
+        "all-outputs": true,
+        "format": " {icon} ",
+        /*"format-icons": {
+            "1": "",
+            "2": "",
+            "3": "󰙯",
+            "4": "",
+            "5": "󰡨",
+            "6": "",
+        }*/
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing":10,
+     },
+
+    "backlight#value" :{
+         "format": "{icon} ",
+         "on-scroll-down": "brightnessctl -c backlight set 1%-",
+         "on-scroll-up": "brightnessctl -c backlight set +1%",
+          "format-icons": [ "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    },
+
+    "custom/power": {
+        "format":"⏻",
+        "on-click": "exec ~/.config/waybar/scripts/power-menu.sh",
+        "tooltip": false,
+    },
+}
