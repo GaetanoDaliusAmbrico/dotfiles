@@ -5,7 +5,7 @@
 ## Getting started
 To set the contig make sure to remove the files that will be used and make a backup
 
-So if you have a ~/.config/sway folder you should rename it to  ~/.config/sway.bak
+So if you have a ~/.config/hyprland folder you should rename it to  ~/.config/hyprland.bak
 
 Then clone the repo with:
 
