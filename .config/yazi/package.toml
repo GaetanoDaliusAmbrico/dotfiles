@@ -1,0 +1,17 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "55bf699"
+hash = "dd97eede8e20e59cd2604e8006e470e2"
+
+[[plugin.deps]]
+use = "macydnah/office"
+rev = "d1e3e51"
+hash = "35241f7d85abc5a0d2441020bc597ceb"
+
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "2da96e3"
+hash = "f9ee1436e3b853508d87f7d49dce56e6"
+
+[flavor]
+deps = []

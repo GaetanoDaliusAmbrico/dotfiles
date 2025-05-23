@@ -1,0 +1,7 @@
+# .zsh_plugins.txt
+# some plugins support deferred loading
+
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search

@@ -1,0 +1,36 @@
+[opener]
+edit = [
+	{ run = 'nvim "$@"', orphan = true, for = "unix" }
+]
+
+pdf_reader = [
+	{ run = 'zathura "$@"', orphan = true, for = "unix"}
+]
+image_viewer = [
+	{ run = 'imv "$@"', orphan = true, for = "unix"}
+]
+video_player = [
+    { run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
+]
+music_player = [
+    { run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
+]
+
+[open]
+rules = [
+{name="*.md",use="edit"},
+{name="*.txt",use="edit"},
+{name="*.pdf",use="pdf_reader"},
+{name="*.jpg",use="image_viewer"},
+{name="*.jpeg",use="image_viewer"},
+{name="*.png",use="image_viewer"},
+{name="*.mp4",use="video_player"},
+{name="*.mp3",use="music_player"},
+{name="*.flac",use="music_player"},
+]
+
+#Glow Markdown Preview
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
+]

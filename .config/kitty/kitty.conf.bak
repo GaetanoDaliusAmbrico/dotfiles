@@ -1,0 +1,13 @@
+# BEGIN_KITTY_THEME
+include active.conf
+
+
+background_opacity 1
+
+font_family      Inter
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+confirm_os_window_close 0
+# END_KITTY_THEME
