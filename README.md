@@ -1,6 +1,6 @@
 # dotfiles
 ## Dependencies
-- [stow](https://github.com/catppuccin/dunst)
+- [stow](https://www.gnu.org/software/stow/)
 -  git
 ## Getting started
 To set the contig make sure to remove the files that will be used and make a backup
